@@ -2,6 +2,8 @@
 
 Tiredful API is intentionally designed broken app. The aim of this web app is to teach developers, QA  or security professionals about flaws present in webservice (REST API) due insecure coding practice.
 
+![Tiredful API image](./Tiredful-API.jpg)
+
 ### Who can use Tiredful API?
 * Web developers
 * Web Pentesters
@@ -61,4 +63,3 @@ We also organize two International Security Conferences
 nullcon International Security Conference - http://nullcon.net
 hardwear.io Hardware Security Conference - http://hardwear.io
 Website: http://payatu.com Email: info (at) payatu dot com
-
