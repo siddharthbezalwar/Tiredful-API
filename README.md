@@ -21,13 +21,13 @@ I tried to cover most of the vulnerabilities, I am sure that we have missed some
 * SQL Injection (SQLite)
 * Cross Site Scripting.
 
-[You can see solution here](https://payatu.com/tiredful-api-solution/)
+[You can see solution here](https://payatu.com/tiredful-api-solution/){:target="_blank"}
 
 ### Can I contribute?
 Yes, you can help by sending us the details of vulnerabilities that we can implement in future versions of Tiredful API. Please mail us at info[at]payatu.com or siddharth[dot]bezalwar[at]gmail[dot]com with subject "Tiredful API Scenario".
 
 ### Where can I get Tiredful API?
-Source can be downloaded from [source](https://github.com/siddharthbezalwar/Tiredful-API).
+Source can be downloaded from [source](https://github.com/siddharthbezalwar/Tiredful-API).{:target="_blank"}
 
 ### How to run Tiredful API?
 Tiredful API is developed using Django Framework and Django Rest Framework, so for running the web server user needs execute following command.
@@ -35,10 +35,10 @@ Tiredful API is developed using Django Framework and Django Rest Framework, so f
 * Navigate to the source folder and locate manage.py file.
 * Then execute `python manage.py runserver`.
 * If static files are not getting load, then execute above command with insecure flag i.e. `python manage.py runserver --insecure`
-If you are facing any issue starting the web server please refer ![django documentation admin](https://docs.djangoproject.com/en/1.11/ref/django-admin/#runserver) or ![django documentation tutorial](https://docs.djangoproject.com/en/1.11/intro/tutorial01/#the-development-server).
+If you are facing any issue starting the web server please refer [django documentation admin](https://docs.djangoproject.com/en/1.11/ref/django-admin/#runserver){:target="_blank"} or [django documentation tutorial](https://docs.djangoproject.com/en/1.11/intro/tutorial01/#the-development-server){:target="_blank"}.
 Please ping me if you are still not able to run development server.
 
-**Note:** It is recommended to use required libraries with the version specified in the requirements.txt. Please refer ![this](https://pip.pypa.io/en/stable/user_guide/#requirements-files) more details
+**Note:** It is recommended to use required libraries with the version specified in the requirements.txt. Please refer [this](https://pip.pypa.io/en/stable/user_guide/#requirements-files){:target="_blank"} more details
 
 ### Feedback and Bug Reports.
 We would love to hear from you about your experience with Tiredful API. Please send us an email on info [at] payatu [dot] com or siddharth [dot] bezalwar [at] gmail [dot] com with Subject "Tiredful API Issue" based on what you want to share. Please include the below in your email.
