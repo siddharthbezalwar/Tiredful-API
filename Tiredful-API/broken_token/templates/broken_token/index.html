@@ -1,0 +1,34 @@
+<!--
+
+   ____  __  ___   ___  ___  ___  _  _  __       __   ___  __
+  (_  _)(  )(  ,) (  _)(   \(  _)( )( )(  )     (  ) (  ,\(  )
+   )(   )(  )  \  ) _) ) ) )) _) )()(  )(__    /__\  ) _/ )(
+  (__) (__)(_)\_)(___)(___/(_)   \__/ (____)  (_)(_)(_)  (__)
+
+
+ Copyright (C) 2017-2018 Payatu Software Labs
+ This file is part of Tiredful API application -->
+
+{% extends 'scenario-basic.html' %}
+
+{% block title-text %} Tiredful API: Broken JWT Tokens {% endblock %}
+
+{% block content %}
+  <h2>Broken Token</h2>
+
+<p>
+  The Broken Token is the collection of the scenario based on the common issues found with JWT implementation. All the scenarios are based on the <a href="https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.md"> OWASP JWT Cheat Sheet</a>. Below provided scenarios are not the only issues with the JWT Implementation. For more information about JWT secuirty issues please refere <a href="https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.md">OWASP JWT Cheat sheet </a><br><br>
+
+  Reference: <a href="https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.md"> https://github.com/OWASP/CheatSheetSeries/blob/master/cheatsheets/JSON_Web_Token_Cheat_Sheet_for_Java.md</a>
+
+  <ul>
+          <li><a href="/jwt-token/info-disclosure/">Information Disclosure</a></li>
+          <li><a href="/jwt-token/jwt-none/">None Signing Algo</a></li>
+          <li><a href="/jwt-token/jwt-signing-algo/">Signing Algo</a></li>
+          <li><a href="/jwt-token/jwt-logout/">Token Revocation</a></li>
+          <li><a href="/jwt-token/crack-jwt/">Secret Brute Force</a></li>
+  </ul>
+
+</p>
+
+{% endblock %}

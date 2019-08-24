@@ -1,0 +1,47 @@
+<!--
+
+   ____  __  ___   ___  ___  ___  _  _  __       __   ___  __
+  (_  _)(  )(  ,) (  _)(   \(  _)( )( )(  )     (  ) (  ,\(  )
+   )(   )(  )  \  ) _) ) ) )) _) )()(  )(__    /__\  ) _/ )(
+  (__) (__)(_)\_)(___)(___/(_)   \__/ (____)  (_)(_)(_)  (__)
+
+
+ Copyright (C) 2017-2018 Payatu Software Labs
+ This file is part of Tiredful API application -->
+
+{% extends 'scenario-basic.html' %}
+
+{% block title-text %} Tiredful API: Broken JWT Tokens {% endblock %}
+
+{% block content %}
+  <h2>Challenge: JWT Token - Signing Algorithm</h2>
+
+<p>
+  The scenario is to demonstrate the issue of not verifying JWT Token signature when user overrides "RSA256" signing algorithm with "HS256" signing algorithm. Joker, a supervillain brewed a devious master plan. As Batman is aware that Joker is up to something, he is trying to figure out the plan. As batman try to uncover the Joker's another devious master plan.
+  <br><br>
+  <pre>
+    <b> GET </b> http://{{ request.get_host }}/api/v1/joker-master-plan/
+  </pre>
+
+    <br>
+    <br>
+    A. Token signed using RS256
+    <pre><b>POST method </b> http://{{ request.get_host }}/api/v1/obtain-jwt-token-rs256/</pre>
+  <br>
+    <b>POST Body:</b>
+    <pre>
+    {
+      &quot;username&quot;: &lt;username&#40;string&#41;&gt;,
+      &quot;password&quot;: &lt;password&#40;string&#41;&gt;
+    }
+    </pre>
+
+
+    Following is the public key content (use content only in key, it is intentionally used to keep the token verification broken)
+    <pre>
+      MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCZiWP68AShibXv6dCMnXqYN96Q9lXNfKqKGvYIinReTX9OZLfcDPYjNB15ML90O33lYocJtEIqBsra7Ty93C8fVbqf4FuYdY8tVoN+FjflKx3pjhNIbM41pAtYGRqj6nD5gIdV+HZC2rIYRo/jKcz2LcBagS88UfSdJJTRp0VSHQIDAQAB
+    </pre>
+
+</p>
+
+{% endblock %}

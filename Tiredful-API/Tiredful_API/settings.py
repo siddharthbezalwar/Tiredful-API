@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'trains.apps.TrainsConfig',
     'health.apps.HealthConfig',
     'advertisements.apps.AdvertisementsConfig',
+    'broken_token.apps.BrokenTokenConfig',
 ]
 
 MIDDLEWARE = [

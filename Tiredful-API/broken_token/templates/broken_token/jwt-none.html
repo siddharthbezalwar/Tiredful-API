@@ -1,0 +1,52 @@
+<!--
+
+   ____  __  ___   ___  ___  ___  _  _  __       __   ___  __
+  (_  _)(  )(  ,) (  _)(   \(  _)( )( )(  )     (  ) (  ,\(  )
+   )(   )(  )  \  ) _) ) ) )) _) )()(  )(__    /__\  ) _/ )(
+  (__) (__)(_)\_)(___)(___/(_)   \__/ (____)  (_)(_)(_)  (__)
+
+
+ Copyright (C) 2017-2018 Payatu Software Labs
+ This file is part of Tiredful API application -->
+
+{% extends 'scenario-basic.html' %}
+
+{% block title-text %} Tiredful API: Broken JWT Tokens {% endblock %}
+
+{% block content %}
+  <h2>Challenge: JWT Token - None Signing Algorithm</h2>
+
+<p>
+  The scenario is to demonstrate the issue of not verifying JWT Token signature when user provides "none" as the value of signing algorithm in JWT token. Joker, a supervillain brewed a devious plan. As Batman is aware that Joker is up to something, he is trying to figure out the plan. As batman try to uncover the Joker's devious plan.
+  <br><br>
+  <pre>
+    <b> GET </b> http://{{ request.get_host }}/api/v1/joker-plan/
+  </pre>
+
+  Use following API end points to obtain the JWT Token. <br><br>
+  A. Token signed using HS256
+    <pre><b>POST method </b> http://{{ request.get_host }}/api/v1/obtain-jwt-token-hs256/</pre>
+  <br>
+    <b>POST Body:</b>
+    <pre>
+    {
+      &quot;username&quot;: &lt;username&#40;string&#41;&gt;,
+      &quot;password&quot;: &lt;password&#40;string&#41;&gt;
+    }
+    </pre>
+    <br>
+    <br>
+    B. Token signed using RS256
+    <pre><b>POST method </b> http://{{ request.get_host }}/api/v1/obtain-jwt-token-rs256/</pre>
+  <br>
+    <b>POST Body:</b>
+    <pre>
+    {
+      &quot;username&quot;: &lt;username&#40;string&#41;&gt;,
+      &quot;password&quot;: &lt;password&#40;string&#41;&gt;
+    }
+    </pre>
+
+</p>
+
+{% endblock %}

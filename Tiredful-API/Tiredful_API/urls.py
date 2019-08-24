@@ -72,4 +72,8 @@ urlpatterns = [
     url(r'^api/v1/', include('advertisements.urls', namespace="advertisements-api")),
     url(r'^advertisements/', include('advertisements.urls', namespace="advertisements")),
 
+    # URL for including broken-token app
+    url(r'^api/v1/', include('broken_token.urls', namespace="broken-token-api")),
+    url(r'^jwt-token/', include('broken_token.urls', namespace="broken-token")),
+
 ]

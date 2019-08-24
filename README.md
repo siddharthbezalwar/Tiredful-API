@@ -21,13 +21,12 @@ I tried to cover most of the vulnerabilities, I am sure that we have missed some
 * SQL Injection (SQLite)
 * Cross Site Scripting.
 
-[You can see solution here](https://payatu.com/tiredful-api-solution/)
 
 ### Can I contribute?
-Yes, you can help by sending us the details of vulnerabilities that we can implement in future versions of Tiredful API. Please mail us at info[at]payatu.com or siddharth[dot]bezalwar[at]gmail[dot]com with subject "Tiredful API Scenario".
+Yes, you can help by sending us the details of vulnerabilities that we can implement in future versions of Tiredful API. Please mail us at siddharth [dot] bezalwar [at] gmail [dot] com with subject "Tiredful API Scenario".
 
 ### Where can I get Tiredful API?
-Source can be downloaded from [source](https://github.com/siddharthbezalwar/Tiredful-API).
+Source can be downloaded from [link](https://github.com/siddharthbezalwar/Tiredful-API).
 
 ### How to run Tiredful API?
 Tiredful API is developed using Django Framework and Django Rest Framework, so for running the web server user needs execute following command.
@@ -40,8 +39,18 @@ Please ping me if you are still not able to run development server.
 
 **Note:** It is recommended to use required libraries with the version specified in the requirements.txt. Please refer [this](https://pip.pypa.io/en/stable/user_guide/#requirements-files) more details
 
+#### Docker Container
+You can run Tiredful via [Docker](https://www.docker.com).  Simply execute:
+
+```
+docker build -t tiredful .
+docker run -p 8000:8000 --name tiredful -it tiredful
+```
+
+Browse to `http://localhost:8000/` and you are all set.  Use `CTRL-C` to shut down the server.
+
 ### Feedback and Bug Reports.
-We would love to hear from you about your experience with Tiredful API. Please send us an email on info [at] payatu [dot] com or siddharth [dot] bezalwar [at] gmail [dot] com with Subject "Tiredful API Issue" based on what you want to share. Please include the below in your email.
+We would love to hear from you about your experience with Tiredful API. Please send us an email on siddharth [dot] bezalwar [at] gmail [dot] com with Subject "Tiredful API Issue" based on what you want to share. Please include the below in your email.
 
 * Operating system with version.
 * Django Framework used.
@@ -53,15 +62,3 @@ Siddharth Bezalwar
 
 @fattu_medjai | siddharth [dot] bezalwar [at] gmail [dot] com
 
-### About Payatu
-Payatu is a boutique security testing company with specialization in:
-
-* IoT Security
-* Mobile Security
-* Cloud security
-* Web Security
-We also organize two International Security Conferences
-
-nullcon International Security Conference - http://nullcon.net
-hardwear.io Hardware Security Conference - http://hardwear.io
-**Website:** http://payatu.com **Email:** info (at) payatu dot com

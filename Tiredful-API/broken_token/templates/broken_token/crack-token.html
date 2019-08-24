@@ -1,0 +1,53 @@
+<!--
+
+   ____  __  ___   ___  ___  ___  _  _  __       __   ___  __
+  (_  _)(  )(  ,) (  _)(   \(  _)( )( )(  )     (  ) (  ,\(  )
+   )(   )(  )  \  ) _) ) ) )) _) )()(  )(__    /__\  ) _/ )(
+  (__) (__)(_)\_)(___)(___/(_)   \__/ (____)  (_)(_)(_)  (__)
+
+
+ Copyright (C) 2017-2018 Payatu Software Labs
+ This file is part of Tiredful API application -->
+
+{% extends 'scenario-basic.html' %}
+
+{% block title-text %} Tiredful API: Broken JWT Tokens {% endblock %}
+
+{% block content %}
+  <h2>Challenge: JWT Token - Crack JWT Secret</h2>
+
+<p>
+  The scenario is based on Brute Forcing the JWT Token signed by HS256 algorithm using the weak secret key. Ususally the attacker needs to forge an arbitrary valid token from a signature. The challenge is little bit twisted as Joker doesn't know the secret used for signing the token. 
+  <br><br>
+  Joker will aproach the challenge as follows
+  <ol>
+    <li>
+      Obtain a HS256 singed JWT token using any of the following API end points
+      <pre><b>POST method </b> http://{{ request.get_host }}/api/v1/obtain-jwt-token-hs256/</pre>
+     <br>
+    <b>POST Body:</b>
+    <pre>
+    {
+      &quot;username&quot;: &lt;username&#40;string&#41;&gt;,
+      &quot;password&quot;: &lt;password&#40;string&#41;&gt;
+    }
+    </pre>
+    <br>
+    <br>
+     <pre><b>POST method </b> http://{{ request.get_host }}/api/v1/get-jwt-token-hs256/</pre>
+  <br>
+    <b>POST Body:</b>
+    <pre>
+    {
+      &quot;username&quot;: &lt;username&#40;string&#41;&gt;,
+      &quot;password&quot;: &lt;password&#40;string&#41;&gt;
+    }
+    </pre>
+    </li>
+    <li>Decode the token and get it's payload</li>
+    <li>Now Joker has Payload, try to generate the signature part and verify it with signature part of obtained token.</li>
+    <li>Remember Joker already knows the secret is 7 characters long, consist of a uppercase alphabet, lowercase alphabets, special symbol, numeric value and somewhat related to the league.</li>
+  </ol>
+</p>
+
+{% endblock %}

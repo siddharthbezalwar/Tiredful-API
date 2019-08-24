@@ -1,0 +1,35 @@
+<!--
+
+   ____  __  ___   ___  ___  ___  _  _  __       __   ___  __
+  (_  _)(  )(  ,) (  _)(   \(  _)( )( )(  )     (  ) (  ,\(  )
+   )(   )(  )  \  ) _) ) ) )) _) )()(  )(__    /__\  ) _/ )(
+  (__) (__)(_)\_)(___)(___/(_)   \__/ (____)  (_)(_)(_)  (__)
+
+
+ Copyright (C) 2017-2018 Payatu Software Labs
+ This file is part of Tiredful API application -->
+
+{% extends 'scenario-basic.html' %}
+
+{% block title-text %} Tiredful API: Broken JWT Tokens {% endblock %}
+
+{% block content %}
+  <h2>Challenge: JWT Token - Token Revocation</h2>
+
+<p>
+  The scenario is to demonstrate the explicit logout/expiration of the JWT token. To invalidate the JWT token developer has to maintain the list of all tokens against which explicit invalidation request is initiated since the tokens will expire only after the set time period.
+  <br><br>
+  1. Following API is the improper implementation of JWT Token logout.<br>
+  <pre>
+    <b> GET </b> http://{{ request.get_host }}/api/v1/logout/
+  </pre>
+
+  <br><br>
+  2. Following API is the secure implementation of JWT Token logout.<br>
+
+  <pre>
+    <b> GET </b> http://{{ request.get_host }}/api/v1/secure-logout/
+  </pre>
+</p>
+
+{% endblock %}
