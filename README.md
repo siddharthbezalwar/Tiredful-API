@@ -19,6 +19,7 @@ I tried to cover most of the vulnerabilities, I am sure that we have missed some
 * Access Control
 * Throttling
 * SQL Injection (SQLite)
+* JWT Issues
 * Cross Site Scripting.
 
 
