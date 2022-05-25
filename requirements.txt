@@ -4,6 +4,6 @@ djangorestframework==3.7.3
 oauth==1.0.1
 oauthlib==2.0.6
 python-oauth2==1.0.1
-PyJWT==1.7.1
+PyJWT==2.4.0
 pycrypto==2.6.1
 
